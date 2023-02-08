@@ -3,6 +3,7 @@ import time
 
 """Generating random numbers without random function"""
 
+
 def lastbit(f):
     return struct.pack('!f', f)[-1] & 1
 

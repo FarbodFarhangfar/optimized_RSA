@@ -1,4 +1,17 @@
-from random_generator import randint
+from .extended_euclidean import gcd
+from .random_generator import randint
+
+
+
+
+def is_coprime(x, y):
+    return gcd(x, y) == 1
+
+
+def find_e(ph, m):
+    for i in range(m, ph):
+        if is_coprime(i, ph):
+            return i
 
 
 def is_prime(n, k=128):  #

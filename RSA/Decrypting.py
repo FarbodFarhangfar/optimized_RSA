@@ -1,4 +1,4 @@
-from extended_euclidean import chineseremaindertheorem
+from .utils.extended_euclidean import chineseremaindertheorem
 
 
 def openning_text(text_address):
@@ -22,7 +22,7 @@ def getting_massage(code):
             temp += chr(int(letters) - 11)
         massage += temp
     if massage[-1] == "|":
-        for i in range(len(massage)-1, 0, -1):
+        for i in range(len(massage) - 1, 0, -1):
             if not massage[i] == "|":
                 massage = massage[:i + 1]
                 break
@@ -54,11 +54,3 @@ def getting_private_key():
     return private_key.split(), text
 
 
-private_key, encrypted_text = getting_private_key()
-text_code = decrypting_method(encrypted_text, private_key)
-
-text = getting_massage(text_code)
-
-
-with open("decrypted_text.txt", "w") as text_file:
-    text_file.write(text)

@@ -55,13 +55,6 @@ def getting_public_key(text_address, public_key_address):
     return public_keyr.split(), textr
 
 
-public_key, text = getting_public_key("new_text.txt", "public_key.txt")
-encrypted_text = encrypting_method(text, public_key)
 
-store = '\n'.join([str(elem) for elem in encrypted_text])
-store = store.replace("['", "")
-store = store.replace("']", "")
-store = store.replace("', '", " ")
-with open("encrypted_text.txt", "w") as text_file:
-    text_file.write(store)
+
 
