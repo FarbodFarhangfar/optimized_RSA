@@ -9,3 +9,5 @@ and use "Encrypting.py" to encrypt your massage
 
 **decrypting**
 For decrypting your massage just run "Decrypting.py"
+
+of you can just use "Python main.py"
